@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1>Cafe</h1>
+
+<body>
+    <div class="content">
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="輸入 飲品名稱">
+            <input type="text" name="money" placeholder="輸入 價格">
+            <input type="text" name="hot" placeholder="輸入 是否可做成熱飲">
+            <button> 加入商品 </button>
+        </form>
+        <table id="cafe-table" cellpadding="10" border="1" width="100%">
+            　<tr>
+                <td>飲品名稱</td>
+                <td>價格</td>
+                <td>是否可做成熱飲</td> 　
+            </tr>
+        </table>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAog71Gjqk4O9XIojoD4JSpsanxreMyikA",
+        authDomain: "foamcat-cafe-9f082.firebaseapp.com",
+        databaseURL: "https://foamcat-cafe-9f082.firebaseio.com",
+        projectId: "foamcat-cafe-9f082",
+        storageBucket: "foamcat-cafe-9f082.appspot.com",
+        messagingSenderId: "766807949924",
+        appId: "1:766807949924:web:1b27edcd3728e50fe71571",
+        measurementId: "G-CQLX2DB78H"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+</script>
+<script src="app.js"></script>
+
+</html>
